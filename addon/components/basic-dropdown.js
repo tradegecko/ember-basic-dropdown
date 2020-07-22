@@ -9,7 +9,7 @@ const defaultDestination = config['ember-basic-dropdown'] && config['ember-basic
 
 export default Component.extend({
   layout: layout,
-  animationEnabled: !Ember.ENV.TEST_MODE,
+  animationEnabled: false, // disabling animation until we fix the issue with occlusion
   isTouchDevice: (!!self.window && 'ontouchstart' in self.window),
   disabled: false,
   renderInPlace: false,
